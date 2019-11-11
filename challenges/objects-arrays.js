@@ -5,53 +5,30 @@
   Use this pattern to create your objects: 
   object name, diet, weight, length, period
 */
- let dino = {
-  name: 'tyrannosaurus', 
-  diet: "carnivorous",
-   weight: "7000kg",
-   length: "12m",
-   period: "Late Cretaceous",
-   roar: function() {
-    return "RAWERSRARARWERSARARARRRR!"
-  }
- }
 
 // tyrannosaurus, carnivorous, 7000kg, 12m, Late Cretaceous
 
 // stegosaurus, herbivorous, 2000kg, 9m, Late Jurassic
-let dinoTwo = {
-  name: 'stegosaurus',
-  diet: "herbivorous",
-  weight: "2000kg",
-  length: "9m",
-  period: "Late Jurassic",
-}
+
 // velociraptor, carnivorous, 15kg, 1.8m, Late Cretaceous
-let dinoThree = {
-  name: 'velociraptor',
-  diet: "carnivorous",
-  weight: "15kg",
-  length: "1.8m",
-  period: "Late Cretaceous",
-}
+
 // Using your dinosaur objects, log answers to these questions:
 
 // How much did tyrannosaurus weigh?
-console.log(dino.weight);
+console.log();
 
 // What was the diet of a velociraptor?
-console.log(dinoThree.diet);
+console.log();
 
 // How long was a stegosaurus?
-console.log(dinoTwo.length);
+console.log();
 
 // What time period did tyrannosaurus live in?
-console.log(dino.period);
+console.log();
 
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
-
-console.log(dino.roar);
+console.log();
 
 
 // ==== Arrays ====
@@ -74,10 +51,8 @@ const graduates = [
 /* Request 1: Create a new array called universities that contains all the universities in the graduates array. This will be an array of strings.
 
 Once you have the new array created, sort the universities alphabetically and log the result. */
-const universities = graduates.map(university => {
-  return university.university;
-});
-console.log(universities.sort());
+const universities = [];
+console.log(universities);
 
 /* Request 2: Create a new array called contactInfo that contains both first name and email of each student. This will be an array of strings.
 
@@ -86,18 +61,10 @@ The resulting contact information strings should have a space between the first 
 
 Log the result of your new array. */
 const contactInfo = [];
-graduates.forEach((element) =>{
-   contactInfo.push(element.first_name + '' + element.email);
-});
 console.log(contactInfo);
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called unisWithUni that contains them all. This will be an array of objects. Log the result. */
 const unisWithUni = [];
-graduates.forEach((element)=>{
-  if(element.university.includes('Uni')){
-    unisWithUni.push(element);
-  }
-});
 console.log(unisWithUni);
 
 
@@ -124,9 +91,6 @@ The zoos want to display both the scientific name and the animal name in front o
 
 */
 const displayNames = [];
-zooAnimals.forEach((element)=>{
-  displayNames.push('Names:' + element.animal_name + 'Scientific:' + element.scientific_name);
-});
 console.log(displayNames);
 
 /* Request 2: .map()
@@ -135,9 +99,7 @@ The zoos need a list of all their animal's names (animal_name only) converted to
 
 */
 
-const lowCaseAnimalNames = zooAnimals.map((element) =>{
-  return element.animal_name.toLocaleLowerCase();
-})
+const lowCaseAnimalNames = [];
 console.log(lowCaseAnimalNames);
 
 /* Request 3: .filter() 
@@ -145,8 +107,7 @@ console.log(lowCaseAnimalNames);
 The zoos are concerned about animals with a lower population count. Using filter, create a new array of objects called lowPopulationAnimals which contains only the animals with a population less than 5.
 
 */
-const lowPopulationAnimals = zooAnimals.filter(a => a.population < 5);
-
+const lowPopulationAnimals = [];
 console.log(lowPopulationAnimals);
 
 /* Request 4: .reduce() 
@@ -154,11 +115,7 @@ console.log(lowPopulationAnimals);
 The zoos need to know their total animal population across the United States. Find the total population from all the zoos using the .reduce() method. Remember the reduce method takes two arguments: a callback (which itself takes two args), and an initial value for the count.
 
 */
-newArr = [];
-zooAnimals.forEach(function(element){
-  newArr.push(element.population);
-});
-const populationTotal = newArr.reduce((account, current)=> account + current);
+const populationTotal = 0;
 console.log(populationTotal);
 
 
